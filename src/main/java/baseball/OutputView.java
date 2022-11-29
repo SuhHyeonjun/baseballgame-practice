@@ -25,4 +25,12 @@ public class OutputView {
         }
         System.out.println(ballCount + Message.BALL.getMessage());
     }
+
+    public void printNothing(List<Integer> computerNumbers, List<Integer> playerNumber) {
+        for (int i = 0; i < NUMBER_SIZE; i++) {
+            if (!(computerNumbers.contains(playerNumber.get(i)))) {
+                System.out.println(Message.NOTHING.getMessage());
+            }
+        }
+    }
 }
