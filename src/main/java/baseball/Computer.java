@@ -1,5 +1,8 @@
 package baseball;
 
+import static baseball.CreateNumberValidator.validateComputerNumberDuplicate;
+import static baseball.CreateNumberValidator.validateComputerNumberRange;
+
 import camp.nextstep.edu.missionutils.Randoms;
 
 import java.util.ArrayList;
@@ -19,6 +22,8 @@ public class Computer {
             duplicateRemover.add(randomNumbers);
         }
         List<Integer> computerNumbers = new ArrayList<>(duplicateRemover);
+        validateComputerNumberDuplicate(computerNumbers);
+        validateComputerNumberRange(computerNumbers);
         return computerNumbers;
     }
 }
