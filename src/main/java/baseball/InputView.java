@@ -1,23 +1,24 @@
 package baseball;
 
+import static baseball.Transducer.transToList;
+import static baseball.inputNumberValidator.validateInputNumber;
+
 import static camp.nextstep.edu.missionutils.Console.readLine;
 
-import java.util.Arrays;
 import java.util.List;
-import java.util.stream.Collectors;
 
 public class InputView {
 
     public List<Integer> inputNumber() {
         System.out.print(Message.INPUT_NUMBER.getMessage());
         String input = readLine();
-        String[] stringArr = input.split("");
-        int[] intArr = new int[stringArr.length];
-        for (int i = 0; i < stringArr.length; i++) {
-            intArr[i] = Integer.parseInt(stringArr[i]);
+        try {
+            validateInputNumber(input);
+        } catch (Exception error) {
+            System.out.println(error.getMessage());
+            return inputNumber();
         }
-        List<Integer> playerNumber = Arrays.stream(intArr).boxed().collect(Collectors.toList());
-        return playerNumber;
+        return transToList(input);
     }
 
     public String inputRestart() {
