@@ -18,7 +18,7 @@ public class inputRestartValidator {
     private static void validateInputRange(String input) {
         String regex = "[1-2]+";
         if (!input.matches(regex)) {
-            throw new IllegalArgumentException(ErrorMessage.INPUT_RANGE.getErrorMessage());
+            throw new IllegalArgumentException(ErrorMessage.INPUT_ONE_OR_TWO.getErrorMessage());
         }
     }
 
