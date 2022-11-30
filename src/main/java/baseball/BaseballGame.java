@@ -7,13 +7,20 @@ public class BaseballGame {
     private static final InputView inputView = new InputView();
     private static final OutputView outputView = new OutputView();
     private static final HintCount hintCount = new HintCount();
+    private static boolean status = true;
     private int strikeCount;
     private int ballCount;
-    private static boolean status = true;
 
     public void start() {
         System.out.println(Message.START_GAME.getMessage());
         List<Integer> computerNumbers = computer.createRandomNumbers();
+        runGame(computerNumbers);
+        System.out.println(Message.SUCCESS_GAME.getMessage());
+        String select = inputView.inputRestart();
+        restartGame(select);
+    }
+
+    private void runGame(List<Integer> computerNumbers) {
         do {
             System.out.println(computerNumbers);
             List<Integer> playerNumber = inputView.inputNumber();
@@ -23,7 +30,6 @@ public class BaseballGame {
             endGame(strikeCount);
             hintCount.initCount();
         } while (status);
-        System.out.println(Message.SUCCESS_GAME.getMessage());
     }
 
     private static boolean endGame(int strikeCount) {
@@ -32,6 +38,15 @@ public class BaseballGame {
             status = false;
         }
         return status;
+    }
+
+    private void restartGame(String select) {
+        if (select.equals("1")) {
+            start();
+        }
+        if (select.equals("2")) {
+            System.out.println(Message.ENDGAME.getMessage());
+        }
     }
 
     private void applyHintCount() {
