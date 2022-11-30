@@ -33,11 +33,11 @@ public class BaseballGame {
 
     private void runGame(List<Integer> computerNumbers) {
         do {
-            System.out.println(computerNumbers);
             List<Integer> playerNumber = inputView.inputNumber();
             hintCount.getHintCount(computerNumbers, playerNumber);
             applyHintCount();
             outputView.printResult(strikeCount, ballCount);
+            System.out.println();
             endGame(strikeCount);
             hintCount.initCount();
         } while (status);
