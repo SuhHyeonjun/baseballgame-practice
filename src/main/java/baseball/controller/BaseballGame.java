@@ -1,5 +1,10 @@
-package baseball;
+package baseball.controller;
 
+import baseball.domain.Computer;
+import baseball.domain.HintCount;
+import baseball.view.InputView;
+import baseball.view.Message;
+import baseball.view.OutputView;
 import java.util.List;
 
 public class BaseballGame {

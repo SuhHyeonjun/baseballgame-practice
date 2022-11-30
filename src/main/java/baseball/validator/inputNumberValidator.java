@@ -1,5 +1,6 @@
-package baseball;
+package baseball.validator;
 
+import baseball.view.ErrorMessage;
 import java.util.Arrays;
 
 public class inputNumberValidator {
@@ -10,7 +11,6 @@ public class inputNumberValidator {
         validateInputSize(input);
         validateInputType(input);
         validateInputRange(input);
-
     }
 
     private static void validateInputDuplicate(String input) {

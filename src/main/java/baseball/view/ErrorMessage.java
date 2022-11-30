@@ -1,4 +1,4 @@
-package baseball;
+package baseball.view;
 
 public enum ErrorMessage {
     CREATE_NUMBER_DUPLICATE("[ERROR] 생성된 값에 중복된 숫자가 있습니다."),
