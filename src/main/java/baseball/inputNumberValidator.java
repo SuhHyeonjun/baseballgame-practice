@@ -6,9 +6,11 @@ public class inputNumberValidator {
 
     public static void validateInputNumber(String input) {
         validateInputDuplicate(input);
+        validateInputBlank(input);
         validateInputSize(input);
         validateInputType(input);
         validateInputRange(input);
+
     }
 
     private static void validateInputDuplicate(String input) {
@@ -36,6 +38,15 @@ public class inputNumberValidator {
         String regex = "^[0-9]*$";
         if (!input.matches(regex)) {
             throw new NumberFormatException(ErrorMessage.INPUT_TYPE.getErrorMessage());
+        }
+    }
+
+    private static void validateInputBlank(String input) {
+        String[] checkBlank = input.split("");
+        for (String str : checkBlank) {
+            if (str.equals(" ")) {
+                throw new NumberFormatException(ErrorMessage.INPUT_BLANK.getErrorMessage());
+            }
         }
     }
 }
