@@ -1,11 +1,10 @@
 package baseball;
 
-import java.util.Arrays;
-
 public class inputRestartValidator {
 
     public static void validateInputRestart(String input) {
         validateInputSize(input);
+        validateInputRange(input);
     }
 
     private static void validateInputSize(String input) {
@@ -14,4 +13,10 @@ public class inputRestartValidator {
         }
     }
 
+    private static void validateInputRange(String input) {
+        String regex = "[1-2]+";
+        if (!input.matches(regex)) {
+            throw new IllegalArgumentException(ErrorMessage.INPUT_RANGE.getErrorMessage());
+        }
+    }
 }
