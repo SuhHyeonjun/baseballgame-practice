@@ -5,12 +5,17 @@ import java.util.Objects;
 
 public class HintCount {
     private static final int NUMBER_SIZE = 3;
-    public static int strikeCount = 0;
-    public static int ballCount = 0;
+    private static int strikeCount = 0;
+    private static int ballCount = 0;
 
     public static void getHintCount(List<Integer> computerNumbers, List<Integer> playerNumber) {
         getStrike(computerNumbers, playerNumber);
         getBall(computerNumbers, playerNumber);
+    }
+
+    public static void initCount() {
+        strikeCount = 0;
+        ballCount = 0;
     }
 
     private static void getStrike(List<Integer> computerNumbers, List<Integer> playerNumber) {
