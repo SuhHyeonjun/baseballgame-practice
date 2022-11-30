@@ -5,6 +5,7 @@ import baseball.domain.HintCount;
 import baseball.view.InputView;
 import baseball.view.Message;
 import baseball.view.OutputView;
+
 import java.util.List;
 
 public class BaseballGame {
@@ -16,6 +17,7 @@ public class BaseballGame {
     private static final String RESTART = "1";
     private static final String QUIT = "2";
     private static boolean status = true;
+    private static int gameCount = 0;
     private int strikeCount;
     private int ballCount;
 
@@ -24,6 +26,7 @@ public class BaseballGame {
         List<Integer> computerNumbers = computer.createRandomNumbers();
         runGame(computerNumbers);
         System.out.println(Message.SUCCESS_GAME.getMessage());
+        gameCount++;
         String select = inputView.inputRestart();
         restartGame(select);
     }
@@ -54,6 +57,7 @@ public class BaseballGame {
         }
         if (select.equals(QUIT)) {
             System.out.println(Message.ENDGAME.getMessage());
+            outputView.printTotalCount(gameCount);
         }
     }
 
