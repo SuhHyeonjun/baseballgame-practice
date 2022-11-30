@@ -18,6 +18,12 @@ public class inputNumberValidator {
         }
     }
 
+    private static void validateInputSize(String input) {
+        if (input.length() != 3) {
+            throw new IllegalArgumentException(ErrorMessage.INPUT_LENGTH.getErrorMessage());
+        }
+    }
+
     private static void validateInputRange(String input) {
         String regex = "[1-9]+";
         if (!input.matches(regex)) {
