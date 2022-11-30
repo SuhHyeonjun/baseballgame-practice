@@ -12,6 +12,9 @@ public class BaseballGame {
     private static final InputView inputView = new InputView();
     private static final OutputView outputView = new OutputView();
     private static final HintCount hintCount = new HintCount();
+    private static final int THREE_STRIKE = 3;
+    private static final String RESTART = "1";
+    private static final String QUIT = "2";
     private static boolean status = true;
     private int strikeCount;
     private int ballCount;
@@ -39,17 +42,17 @@ public class BaseballGame {
 
     private static boolean endGame(int strikeCount) {
         status = true;
-        if (strikeCount == 3) {
+        if (strikeCount == THREE_STRIKE) {
             status = false;
         }
         return status;
     }
 
     private void restartGame(String select) {
-        if (select.equals("1")) {
+        if (select.equals(RESTART)) {
             start();
         }
-        if (select.equals("2")) {
+        if (select.equals(QUIT)) {
             System.out.println(Message.ENDGAME.getMessage());
         }
     }
