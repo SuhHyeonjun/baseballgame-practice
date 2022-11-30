@@ -17,10 +17,11 @@
 - [x] 1부터 9까지의 수를 입력할 수 있다.
 
 ##### 예외사항
-- [] 중복되는 수를 입력할 시 IllegalArgumentException을 발생시킨다.
-- [] 각 자리수가 1 ~ 9의 범위의 숫자가 아닐 시 IllegalArgumentException을 발생시킨다.
-- [] 문자를 입력 시 NumberFormatException을 발생시킨다.
-- [] 공백이 입력되면 IllegalArgumentException을 발생시킨다.
+- [x] 중복되는 수를 입력할 시 IllegalArgumentException을 발생시킨다.
+- [x] 입력한 값의 길이가 3이 아닐 시 IllegalArgumentException을 발생시킨다.
+- [x] 각 자리수가 1 ~ 9의 범위의 숫자가 아닐 시 IllegalArgumentException을 발생시킨다.
+- [x] 문자를 입력 시 NumberFormatException을 발생시킨다.
+- [x] 공백이 입력되면 IllegalArgumentException을 발생시킨다.
 
 ---
 ### ✅ 컴퓨터의 수와 입력한 수를 비교하여 힌트를 준다.
@@ -41,3 +42,9 @@
 ### ✅ 게임종료시 재시작 여부를 묻는다.
 - [x] 1을 입력 시 다시 랜덤한 번호를 생성하여 3스트라이크가 나올 때 까지 게임이 반복된다.
 - [x] 2를 입력 시 게임은 종료된다.
+
+##### 예외사항
+- [] 입력한 값의 길이가 1이 아닐 시 IllegalArgumentException을 발생시킨다.
+- [] 입력한 값이 1또는 2가 아닐 시 IllegalArgumentException을 발생시킨다.
+- [] 문자를 입력 시 NumberFormatException을 발생시킨다.
+- [] 공백이 입력되면 IllegalArgumentException을 발생시킨다.
