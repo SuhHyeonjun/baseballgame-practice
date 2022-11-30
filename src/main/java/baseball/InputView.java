@@ -10,13 +10,19 @@ public class InputView {
 
     public List<Integer> inputNumber() {
         System.out.print(Message.INPUT_NUMBER.getMessage());
-        String inputNumber = readLine();
-        String[] stringArr = inputNumber.split("");
+        String input = readLine();
+        String[] stringArr = input.split("");
         int[] intArr = new int[stringArr.length];
         for (int i = 0; i < stringArr.length; i++) {
             intArr[i] = Integer.parseInt(stringArr[i]);
         }
         List<Integer> playerNumber = Arrays.stream(intArr).boxed().collect(Collectors.toList());
         return playerNumber;
+    }
+
+    public String inputRestart() {
+        System.out.println(Message.ASK_RESTART.getMessage());
+        String input = readLine();
+        return input;
     }
 }
