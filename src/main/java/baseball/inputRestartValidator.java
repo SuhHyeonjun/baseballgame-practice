@@ -3,7 +3,9 @@ package baseball;
 public class inputRestartValidator {
 
     public static void validateInputRestart(String input) {
+        validateInputBlank(input);
         validateInputSize(input);
+        validateInputType(input);
         validateInputRange(input);
     }
 
@@ -17,6 +19,19 @@ public class inputRestartValidator {
         String regex = "[1-2]+";
         if (!input.matches(regex)) {
             throw new IllegalArgumentException(ErrorMessage.INPUT_RANGE.getErrorMessage());
+        }
+    }
+
+    private static void validateInputType(String input) {
+        String regex = "^[0-9]*$";
+        if (!input.matches(regex)) {
+            throw new NumberFormatException(ErrorMessage.INPUT_TYPE.getErrorMessage());
+        }
+    }
+
+    private static void validateInputBlank(String input) {
+        if (input.equals(" ")) {
+            throw new IllegalArgumentException(ErrorMessage.INPUT_BLANK.getErrorMessage());
         }
     }
 }
