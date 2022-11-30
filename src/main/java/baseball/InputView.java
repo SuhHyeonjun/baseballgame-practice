@@ -3,6 +3,7 @@ package baseball;
 import static baseball.Transducer.transToList;
 import static baseball.inputNumberValidator.validateInputNumber;
 
+import static baseball.inputRestartValidator.validateInputRestart;
 import static camp.nextstep.edu.missionutils.Console.readLine;
 
 import java.util.List;
@@ -24,6 +25,12 @@ public class InputView {
     public String inputRestart() {
         System.out.println(Message.ASK_RESTART.getMessage());
         String input = readLine();
+        try {
+            validateInputRestart(input);
+        } catch (Exception error) {
+            System.out.println(error.getMessage());
+            return inputRestart();
+        }
         return input;
     }
 }
