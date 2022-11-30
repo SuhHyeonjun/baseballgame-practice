@@ -7,6 +7,7 @@ public class inputNumberValidator {
     public static void validateInputNumber(String input) {
         validateInputDuplicate(input);
         validateInputSize(input);
+        validateInputType(input);
         validateInputRange(input);
     }
 
@@ -28,6 +29,13 @@ public class inputNumberValidator {
         String regex = "[1-9]+";
         if (!input.matches(regex)) {
             throw new IllegalArgumentException(ErrorMessage.INPUT_RANGE.getErrorMessage());
+        }
+    }
+
+    private static void validateInputType(String input) {
+        String regex = "^[0-9]*$";
+        if (!input.matches(regex)) {
+            throw new NumberFormatException(ErrorMessage.INPUT_TYPE.getErrorMessage());
         }
     }
 }
