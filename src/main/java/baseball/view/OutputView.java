@@ -18,4 +18,8 @@ public class OutputView {
             System.out.println(Message.NOTHING.getMessage());
         }
     }
+
+    public void printTotalCount(int gameCount) {
+        System.out.print(Message.GAME_ATTEMPTS.getMessage() + gameCount);
+    }
 }
