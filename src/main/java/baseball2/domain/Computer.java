@@ -1,7 +1,7 @@
-package baseball.domain;
+package baseball2.domain;
 
-import static baseball.validator.CreateNumberValidator.validateComputerNumberDuplicate;
-import static baseball.validator.CreateNumberValidator.validateComputerNumberRange;
+import static baseball2.validator.CreateNumberValidator.validateComputerNumberDuplicate;
+import static baseball2.validator.CreateNumberValidator.validateComputerNumberRange;
 
 import camp.nextstep.edu.missionutils.Randoms;
 

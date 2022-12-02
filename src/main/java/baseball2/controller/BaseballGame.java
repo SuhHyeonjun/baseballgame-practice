@@ -1,10 +1,10 @@
-package baseball.controller;
+package baseball2.controller;
 
-import baseball.domain.Computer;
-import baseball.domain.HintCount;
-import baseball.view.InputView;
-import baseball.view.Message;
-import baseball.view.OutputView;
+import baseball2.domain.Computer;
+import baseball2.domain.HintCount;
+import baseball2.view.InputView;
+import baseball2.view.Message;
+import baseball2.view.OutputView;
 
 import java.util.List;
 

@@ -1,6 +1,6 @@
-package baseball.validator;
+package baseball2.validator;
 
-import baseball.view.ErrorMessage;
+import baseball2.view.ErrorMessage;
 
 public class inputRestartValidator {
 

@@ -1,4 +1,4 @@
-package baseball.view;
+package baseball2.view;
 
 public class OutputView {
     private static final int ZERO = 0;
