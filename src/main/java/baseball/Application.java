@@ -1,6 +1,6 @@
-package baseball2;
+package baseball;
 
-import baseball2.controller.BaseballGame;
+import baseball.controller.BaseballGame;
 
 public class Application {
     public static void main(String[] args) {

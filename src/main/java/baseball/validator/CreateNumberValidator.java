@@ -1,6 +1,6 @@
-package baseball2.validator;
+package baseball.validator;
 
-import baseball2.view.ErrorMessage;
+import baseball.view.ErrorMessage;
 
 import java.util.HashSet;
 import java.util.List;

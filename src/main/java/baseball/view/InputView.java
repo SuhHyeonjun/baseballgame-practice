@@ -1,8 +1,8 @@
-package baseball2.view;
+package baseball.view;
 
-import static baseball2.domain.Transducer.transToList;
-import static baseball2.validator.inputNumberValidator.validateInputNumber;
-import static baseball2.validator.inputRestartValidator.validateInputRestart;
+import static baseball.domain.Transducer.transToList;
+import static baseball.validator.inputNumberValidator.validateInputNumber;
+import static baseball.validator.inputRestartValidator.validateInputRestart;
 
 import static camp.nextstep.edu.missionutils.Console.readLine;
 
